@@ -5,8 +5,8 @@ export const site = {
   vision: "To be a leading Human Capital solutions provider partnering organizations' growth.",
   address: "B-308 Parsvanath Prestige, Sector 93-A, Noida",
   phones: ["+91 98998 91107", "0120-4241067"],
-  email: "contact@vardhnamconsulting.com",
-  website: "www.vardhnamconsulting.com",
+  email: "devendra@vardhnamconsulting.in",
+  website: "vardhnamconsulting.in",
 };
 
 export const navLinks = [
