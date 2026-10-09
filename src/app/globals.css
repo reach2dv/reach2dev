@@ -1,26 +1,116 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #faf9f4;
+  --foreground: #293c34;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand: #367454;
+  --color-brand-dark: #24553d;
+  --color-brand-soft: #edf1e8;
+  --color-accent: #a55036;
+  --color-accent-soft: #fdeceb;
+  --color-ocean: #345c51;
+  --color-ink: #153e2f;
+  --font-sans: var(--font-jakarta);
+  --font-display: var(--font-fraunces);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+}
+
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+.reveal.is-visible {
+  animation: reveal-in 0.65s ease both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+@keyframes reveal-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+::selection { background: #d9e6c6; color: #153e2f; }
+:focus-visible { outline: 3px solid #a55036; outline-offset: 5px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+.skip-link { position: fixed; top: -80px; left: 16px; z-index: 100; background: white; padding: 12px 20px; border-radius: 8px; }
+.skip-link:focus { top: 12px; }
+.eyebrow { font-size: 10px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; color: #42644e; }
+.status-dot { display: inline-block; width: 7px; height: 7px; margin-right: 9px; border-radius: 50%; background: #367454; }
+.hero-section { padding: 148px 0 0; background: radial-gradient(ellipse at 85% 15%, #e9ecd9 0, transparent 48%), #faf9f4; }
+.hero-grid { display: grid; grid-template-columns: 1.18fr 1fr; align-items: center; gap: 60px; }
+.hero-title { font-family: var(--font-fraunces), Georgia, serif; font-size: clamp(42px, 4.5vw, 64px); line-height: 1.1; letter-spacing: -.045em; font-weight: 500; color: #153e2f; margin-top: 26px; }
+.hero-title em { font-weight: 400; color: #527958; }
+.hero-description { margin-top: 24px; max-width: 520px; font-size: 15px; line-height: 1.85; color: #526159; }
+.button-primary, .button-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 20px; padding: 15px 21px; border-radius: 6px; font-size: 12px; font-weight: 600; transition: background .2s, transform .2s; }
+.button-primary { background: #153e2f; color: white; }
+.button-primary:hover { background: #285c43; transform: translateY(-2px); }
+.button-secondary { border: 1px solid #bec9b9; color: #153e2f; }
+.button-secondary:hover { background: #e8eddf; }
+.hero-note { margin-top: 23px; color: #6c786f; font-size: 11px; }
+.growth-panel { background: #153e2f; color: #f9f8ed; padding: 30px; border-radius: 8px 76px 8px 8px; box-shadow: 14px 14px 0 #e1e7d6; }
+.growth-panel .eyebrow { color: #c2d1b4; font-size: 9px; }
+.growth-star { font-size: 38px; line-height: 1; color: #d2dfab; }
+.growth-heading { margin-top: 26px; font-family: var(--font-fraunces), Georgia, serif; font-size: clamp(40px, 4vw, 58px); line-height: 1.05; letter-spacing: -.04em; }
+.growth-heading > span { color: #d6df9d; }
+.growth-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; align-items: end; margin-top: 32px; }
+.growth-steps > div { padding: 16px 12px; background: #30573d; min-height: 100px; display: flex; flex-direction: column; justify-content: space-between; border-top: 1px solid #7f9866; }
+.growth-steps > div:nth-child(2) { min-height: 133px; background: #597648; }
+.growth-steps > div:nth-child(3) { min-height: 166px; background: #c5d59c; color: #153e2f; }
+.growth-steps span { font-size: 10px; opacity: .8; }
+.growth-steps p { font-size: 12px; line-height: 1.55; }
+.growth-caption { margin-top: 23px; font-size: 9px; color: #d0dac7; }
+.hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin-top: 70px; padding: 30px 0; border-top: 1px solid #d9ded1; border-bottom: 1px solid #d9ded1; }
+.hero-stats > div + div { border-left: 1px solid #d9ded1; padding-left: 28px; }
+.hero-stats dt { font-family: var(--font-fraunces), Georgia, serif; font-size: 34px; color: #153e2f; }
+.hero-stats dd { margin-top: 4px; font-size: 11px; color: #626d63; }
+.team-card { height: 100%; background: white; border: 1px solid #dce1d6; border-radius: 12px; padding: 28px; box-shadow: 0 6px 24px #153e2f04; }
+.team-profile { display: flex; align-items: center; gap: 22px; padding-bottom: 25px; border-bottom: 1px solid #e4e8dd; }
+.team-portrait { width: 110px; height: 133px; flex-shrink: 0; object-fit: cover; border-radius: 6px; background: #e9ede3; }
+.team-highlights { margin-top: 24px; display: grid; gap: 10px; font-size: 11px; color: #42644e; }
+.team-highlights li { display: flex; gap: 10px; }
+.team-strengths { margin-top: 40px; display: grid; grid-template-columns: repeat(3,1fr); gap: 30px; padding-top: 32px; border-top: 1px solid #d9ded1; }
+.philosophy-section { padding: 64px 0; background: #e9eddc; color: #153e2f; }
+#approach .text-brand, #contact .bg-ink .text-brand { color: #c7dcae; }
+#approach .text-accent { color: #e1b48b; }
+@media (max-width: 1023px) {
+  .hero-grid { gap: 30px; }
+  .growth-panel { padding: 24px; }
+}
+@media (max-width: 767px) {
+  .hero-section { padding-top: 112px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-title { font-size: clamp(39px, 8vw, 58px); }
+  .growth-panel { max-width: 510px; margin-right: 12px; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); margin-top: 48px; gap: 24px; }
+  .hero-stats > div + div { padding-left: 0; border-left: 0; }
+  .team-strengths { grid-template-columns: 1fr; gap: 24px; }
+  .team-card { padding: 22px; }
+  .team-profile { gap: 16px; }
+  .team-profile .eyebrow { font-size: 8px; }
+  .team-profile h3 { font-size: 23px; }
+  section.py-24 { padding-block: 64px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal.is-visible { animation: none; }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
