@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import Container from "@/components/ui/Container";
 import { navLinks } from "@/data/content";
@@ -23,9 +24,8 @@ export default function Navbar() {
     >
       <a href="#main-content" className="skip-link">Skip to content</a>
       <Container className="flex h-20 items-center justify-between">
-        <a href="#top" className="flex items-center gap-2 font-display text-xl font-semibold text-ink">
-          <span aria-hidden className="grid h-10 w-10 place-items-center rounded-tl-2xl rounded-br-2xl bg-ink text-lg text-white">V</span>
-          <span className="leading-tight">Vardhnam<span className="block font-sans text-[9px] font-medium uppercase tracking-[0.23em] text-foreground/65">Consulting</span></span>
+        <a href="#top" aria-label="Vardhnam Consulting — Growth Never Stops">
+          <Image src="/images/vardhnam-logo.png" alt="Vardhnam Consulting" width={536} height={193} priority className="h-14 w-auto" />
         </a>
 
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">

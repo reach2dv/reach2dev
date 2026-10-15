@@ -205,12 +205,40 @@ export const team: Member[] = [
   },
   {
     name: "Devendra Gaur",
-    role: "Education & Growth Strategist",
-    image: "/images/devendra-gaur.jpeg",
+    role: "Business Strategy",
+    image: "/images/devendra-gaur.webp",
     bio: [
-      "A versatile, entrepreneurial management professional with extensive experience in the education industry, with deep knowledge of both brick-and-mortar and e-learning.",
-      "Instrumental in initiating inter-company tie-ups, designing low-cost, high-yield marketing strategies and running units as independent profit centres.",
+      "Devendra leads Business Strategy. He is a seasoned leader with 30+ years in business strategies, from pre-school chains to coaching to the EdTech industry.",
+      "A known player in public sector engagement, he is results-oriented with a proven track record of optimizing project outcomes. His core skills are in strategic project management and team leadership.",
     ],
-    highlights: ["Tata Infotech · Zee Education Network", "Makeover · Aadyant Education", "Sales & business-unit management"],
+    highlights: ["30+ years in education business strategy", "Pre-school chains · Coaching · EdTech", "Public sector engagement", "Strategic project management & team leadership"],
   },
 ];
+
+export const flagship = {
+  eyebrow: "A Vardhnam initiative",
+  title: "Dare to Dream",
+  tagline: "Impossible is nothing",
+  poem: [
+    "Only as high as I reach can I grow,",
+    "Only as far as I seek can I go,",
+    "Only as deep as I look can I see,",
+    "Only as much as I dream can I be.",
+  ],
+  about: [
+    "Dare to Dream is designed to question, test, push and challenge one's persona, so you can face and manage today's cut-throat competitive environment.",
+    "Its philosophy is simple: try, try till you succeed. Many people hold immense knowledge or talent, yet never realise their dreams, held back by a negative attitude, excuses and a refusal to take responsibility for their actions.",
+    "Success is a process: a series of actions, changes and phases, powered by the right attitude and skills. Everyone deserves a life of no regrets, and that choice lies in no one but us.",
+  ],
+  inside: [
+    "Positive Attitude in Life",
+    "Laws of Goal Setting",
+    "Teamwork and Winning Teams",
+    "Presentation Skills",
+    "Communication Styles and Spoken English",
+    "Know Yourself: Non-Verbal Personality Test",
+    "Group Discussion and Interview Skills",
+  ],
+  closing: "Wishes and hopes are nothing until you take the first step towards making them something.",
+  footer: "The future belongs to those who believe in their dreams",
+};

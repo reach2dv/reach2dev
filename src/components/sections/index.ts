@@ -7,3 +7,4 @@ export { default as Approach } from "./Approach";
 export { default as Team } from "./Team";
 export { default as Contact } from "./Contact";
 export { default as Footer } from "./Footer";
+export { default as Flagship } from "./Flagship";

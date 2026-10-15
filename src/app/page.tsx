@@ -1,4 +1,4 @@
-import { About, Approach, Contact, Footer, Hero, Navbar, Programs, Services, Team } from "@/components/sections";
+import { About, Approach, Contact, Flagship, Footer, Hero, Navbar, Programs, Services, Team } from "@/components/sections";
 import Philosophy from "@/components/sections/Philosophy";
 
 export default function Home() {
@@ -10,6 +10,7 @@ export default function Home() {
         <About />
         <Services />
         <Programs />
+        <Flagship />
         <Approach />
         <Team />
         <Philosophy />
